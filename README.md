@@ -1,32 +1,62 @@
-# californiahousing
+# California Housing
 
-# Software and tools requiresd
-1. [GithubAccount](https:\\github.com)
-2. [HerokuAccount](https:\\heroku.com)
-3. [GitCLI](https:\\gitcli.com)
-4. [VScode](https:\\vscode.com)
+## Software and Tools Required
 
+1. [Github Account](https://github.com)
+2. [Heroku Account](https://heroku.com)
+3. [Git CLI](https://git-scm.com/downloads)
+4. [VS Code](https://code.visualstudio.com)
 
-# Create a new virtual Environment to prevent Global Installation
+## Create a New Virtual Environment
 
-'''
-for conda environment use
--->conda create -p venv python==3.7 -y
+Creating a virtual environment prevents installing packages globally and keeps your project dependencies isolated.
+
+### Using Conda
+
+```bash
+# Create virtual environment
+conda create -p venv python==3.7 -y
+
 # Activate the virtual environment
--->
-'''
+conda activate venv/
+```
 
-'''
-using python scripts
--->python -m venv env
--->env/Scripts/activate.bat
-'''
+### Using Python venv
 
-# Installing Packages
-'''
--->pip install requests
-'''
-# saving dependencies to .txt file
--->pip freeze>requirements.txt
+```bash
+# Create virtual environment
+python -m venv venv
 
+# Activate on Windows
+venv\Scripts\activate
 
+# Activate on Mac/Linux
+source venv/bin/activate
+```
+
+## Installing Packages
+
+```bash
+pip install -r requirements.txt
+```
+
+Or install individual packages:
+
+```bash
+pip install requests
+```
+
+## Saving Dependencies
+
+Save all installed packages to a requirements file:
+
+```bash
+pip freeze > requirements.txt
+```
+
+## Project Setup
+
+1. Clone the repository
+2. Create and activate virtual environment
+3. Install dependencies: `pip install -r requirements.txt`
+4. Run the project
